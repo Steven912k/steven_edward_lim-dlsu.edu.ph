@@ -1,0 +1,125 @@
+<div id="mainhome">
+  <span style="cursor:pointer; float: left; font-size: 40px; color: white;" onclick="openNav()">&#9776;</span>
+  
+    <div>
+      <span><b style="color: white; font-size: 50px; text-align: left; margin-left: 30px; text-shadow: 4px 2px black;"><i>WeightMate</i></b></span>
+      <span style="color: white; font-size:18px; text-shadow: 4px 2px black;"><b>The Tracker that Cares.~</b></span>
+    </div>
+
+</div >
+
+<div id="welcome">
+  
+  <div id="welcometext1">
+    <span style="font-size: 120px; color: white; "><b><i>WeightMate</i></b></span>
+  </div>
+
+  <div id="welcometext2">
+    <span style="font-size: 40px; color: white;"> <b>Welcome {{{username}}}!  </b> </span>
+  </div>
+
+  <a href="about" class="learnbutton">Learn more.</a>
+  <img src="https://i.ibb.co/vkgfj82/Logo-Maker-Ca-1582876910414-1.png" alt="WeightMate Logo" id="weightmatelogo">
+
+</div>
+
+<div id="objectives">
+  <table style="width:100%; padding-top: 140px; table-layout: fixed;">
+    <tr> 
+      <th><img src=https://image.flaticon.com/icons/svg/684/684930.svg width="100px" height="150px"></th>
+      <th><img src=https://image.flaticon.com/icons/svg/988/988108.svg width="100px" height="150px"></th>
+      <th><img src=https://image.flaticon.com/icons/svg/1924/1924820.svg width="100px" height="150px"></th>
+    </tr>
+    <tr style="font-size: 30px; font-weight: bold;"> 
+      <td>Update.</td>
+      <td>Calculate. </td>
+      <td>Evaluate. </td>
+    </tr>
+    <tr style="font-size: 20px" >
+      <td>Record your measurements.</td>
+      <td>Use the available calculators.</td>
+      <td>Assess your health.</td>
+    </tr>
+    <tr style="font-size: 8px;">
+      <td>Icon made by Freepik from www.flaticon.com</td>
+      <td>Icon made by mynamepong from www.flaticon.com</td>
+      <td>Icon made by Eucalyp from www.flaticon.com</td>
+    </tr>
+  </table>
+</div>
+
+<div id="begin">
+  <div id="begintext">Start updating NOW!</div>
+  <div id="beginb">
+    <a href="weight" class="beginbutton">Update your measurements now!</a>
+  </div>
+</div>
+
+<div id="track">
+  <div id="tracktext"> Track your <br>progress.</div>
+  <a href="weight" class="trackbutton">Track now!</a>
+</div>
+
+<div id="calculators">
+  <div id="calculatortext">Use our calculators.</div>
+  <div id="calculatortable">
+    <table id="calculatortexttable" style="width:100%; padding-top: 140px; table-layout: fixed;">
+      <tr>
+        <th><a href="bodyfat" class="bodyfatbutton">Body Fat</a></th>
+        <th><a href="bmi" class="bmibutton">BMI</a></th>
+        <th><a href="weight#CaloriesCalc" class="caloriesbutton">Calories</a></th>
+      </tr>
+    </table>
+  </div>
+  <div id="backtotop"><a href="#" style="color: white">Go back to top.</a></div>
+</div>
+
+<div id="contactus">
+  <div id="contactustext">Any suggestions, or concerns?</div>
+  <div id="contactb">
+    <a href="about#members" class="contactbutton" >Contact Us!</a>
+  </div>
+</div> 
+
+<script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("mainhome").style.marginLeft = "250px";
+      document.getElementById("welcome").style.marginLeft = "250px";
+      document.getElementById("objectives").style.marginLeft = "250px";
+      document.getElementById("begin").style.marginLeft = "250px";
+      document.getElementById("track").style.marginLeft = "250px";
+      document.getElementById("calculators").style.marginLeft = "250px";
+      document.getElementById("contactus").style.marginLeft = "250px";
+      document.getElementById("mainhome").style.filter = "brightness(60%)";
+      document.getElementById("welcome").style.filter = "brightness(60%)";
+      document.getElementById("objectives").style.filter = "brightness(60%)";
+      document.getElementById("begin").style.filter = "brightness(60%)";
+      document.getElementById("track").style.filter = "brightness(60%)";
+      document.getElementById("calculators").style.filter = "brightness(60%)";
+      document.getElementById("contactus").style.filter = "brightness(60%)";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("mainhome").style.marginLeft= "0";
+      document.getElementById("welcome").style.marginLeft= "0";
+      document.getElementById("objectives").style.marginLeft= "0";
+      document.getElementById("begin").style.marginLeft = "0";
+      document.getElementById("track").style.marginLeft = "0";
+      document.getElementById("calculators").style.marginLeft = "0";
+      document.getElementById("contactus").style.marginLeft = "0";
+      document.getElementById("mainhome").style.filter = "brightness(100%)";
+      document.getElementById("welcome").style.filter = "brightness(100%)";
+      document.getElementById("objectives").style.filter = "brightness(100%)";
+      document.getElementById("begin").style.filter = "brightness(100%)";
+      document.getElementById("track").style.filter = "brightness(100%)";
+      document.getElementById("calculators").style.filter = "brightness(100%)";
+      document.getElementById("contactus").style.filter = "brightness(100%)";
+      document.body.style.backgroundColor = "white";
+  }
+</script>
+
+
+

@@ -1,0 +1,118 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+    <div id="main" style="text-align: center; font-size: 30px;">
+      <span style="cursor:pointer; float: left;" onclick="openNav()">&#9776;</span>
+      <b style="color: cornflowerblue; font-family: Raleway; font-size: 85px; font-weight: bolder;">WeightMate</b>
+    </div>
+    
+    <script>
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          document.getElementById("chartBackground").style.marginLeft = "550px";
+          document.getElementById("chartBackground").style.filter = "brightness(60%)";
+          document.getElementById("outer-div").style.filter = "brightness(60%)";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.getElementById("chartBackground").style.marginLeft = "400px";
+          document.getElementById("chartBackground").style.filter = "brightness(100%)";
+          document.getElementById("outer-div").style.filter = "brightness(100%)";
+          document.body.style.backgroundColor = "white";
+      }
+    </script>
+
+<div id="chartBackground">
+    <br>
+    <div id="chartContainer">
+      <canvas id="myChart" height="65%" width="125%"></canvas>
+    </div>
+  </div>
+  <script>
+    var CHART = document.getElementById("myChart").getContext('2d');
+
+    var linechart = new Chart(CHART, {
+      type: 'line',
+      data: {
+        labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+        datasets: [{
+          label : "BMI",
+          fill : false,
+          backgroundColor : "rgba(75, 192, 192, 0.4)",
+          borderColor: "cornflowerblue",
+          pointBorderColor: "rgba(75,192,192,1)",
+          pointBackgroundColor: "#fff",
+          pointBorderWidth: 7,
+          pointHoverRadius: 9,
+          pointHoverBackgroundColor: "rgba(75,192,192,1)",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointHoverBorderWidth: 3,
+          pointRadius: 1,
+          data: [1,2,3,4,5,6,6,7]
+        }],
+      },
+      options:{}
+    }) 
+  </script>
+<br>
+<br>
+  <div align="center">
+    <p id="note">*Note that Weight must be in pounds and Height must be in feet and the extra inches.</p>
+  </div>
+
+  <script>
+    function computeBMI(){
+      var weight =  parseInt(document.getElementById("Weight").value);
+      var height = (parseInt(document.getElementById("Feet").value) * 12) + parseFloat(document.getElementById("Inches").value);
+      var BMI = 703*(weight/Math.pow(height,2));
+      document.getElementById("BMI").value = BMI.toFixed(2);
+    }
+  </script>
+
+  <div id="outer-div" width="100%">
+      <div id="inner-div" >
+        <form action="POST" action="#"><div style="margin:0px; padding:0px">
+          <div align="left">
+            <label>Weight: </label>
+            <input style="float: right;" type="number" placeholder="In pounds" name="Weight" id="Weight" maxlength="20" required/>
+          </div>
+          <div align="left">
+            <label>Height-Feet: </label>
+              <input style="float: right;" type="number" placeholder="Feet" name="Feet" id="Feet" maxlength="20" required/>
+          </div>
+          <div align="left">
+            <label>Height-Inches: </label>
+            <input style="float: right;" type="number" placeholder="Inches" name="Inches" id="Inches" maxlength="20" required/>
+          </div>
+          <br>
+          <div align="center">
+            <label >Body BMI: </label>
+            <input type="text" name="BMI" id="BMI" readonly="readonly" />
+            <label >kg/m^2</label>
+          </div> 
+          <br>
+          <div align="center">
+            <input type="button" value="Calculate" name="Calculate" id="Calculate" class="btn btn-info" onclick="computeBMI()">
+            <input type="reset" value="Reset" name="reset" id="reset" class="btn btn-warning">
+            <button type="submit" value="Save" name="save" id="save" class="btn btn-success">Save</button>
+          </div> 
+        </form>
+      </div>
+  </div>
+  <br>
+  <br>
+  <div align="center" id="BMIpic">
+    <img src="https://i.ibb.co/gTnWYDB/BMI-standings.png" alt="BMI-standings" width="400" height="350">
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>

@@ -1,0 +1,419 @@
+<div id="mainhome">
+    <span style="cursor:pointer; float: left; font-size: 40px; color: white;" onclick="openNav()">&#9776;</span>
+    
+    <div>
+      <span><b style="color: white; font-size: 50px; text-align: left; margin-left: 30px; text-shadow: 4px 2px black;"><i>WeightMate</i></b></span>
+      <span style="color: white; font-size:18px; text-shadow: 4px 2px black;"><b>The Tracker that Cares.~</b></span>
+    </div>
+  
+  </div >
+    <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+
+    document.getElementById("mainhome").style.marginLeft = "250px";
+    document.getElementById("aboutweightmate").style.marginLeft = "250px";
+    document.getElementById("formulas").style.marginLeft = "250px";
+    document.getElementById("members").style.marginLeft = "250px";
+    document.getElementById("contactarea").style.marginLeft = "250px";
+
+    document.getElementById("mainhome").style.filter = "brightness(60%)";
+    document.getElementById("aboutweightmate").style.filter = "brightness(60%)";
+    document.getElementById("formulas").style.filter = "brightness(60%)";
+    document.getElementById("members").style.filter = "brightness(60%)";
+    document.getElementById("contactarea").style.filter = "brightness(60%)";
+
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+
+    document.getElementById("mainhome").style.marginLeft= "0";
+    document.getElementById("aboutweightmate").style.marginLeft= "0";
+    document.getElementById("formulas").style.marginLeft= "0";
+    document.getElementById("members").style.marginLeft= "0";
+    document.getElementById("contactarea").style.marginLeft= "0";
+
+    document.getElementById("mainhome").style.filter = "brightness(100%)";
+    document.getElementById("aboutweightmate").style.filter = "brightness(100%)";
+    document.getElementById("formulas").style.filter = "brightness(100%)";
+    document.getElementById("members").style.filter = "brightness(100%)";
+    document.getElementById("contactarea").style.filter = "brightness(100%)";
+
+    document.body.style.backgroundColor = "white";
+    }
+    </script>
+
+    <div class="container">
+
+    <h1>Profile</h1>
+    <p>Edit your profile below.</p>
+    <hr>
+
+    <div class="img">
+    <img src="https://i.ibb.co/gS3KyCy/person-outline.png" alt = "Avatar" class = "avatar" id = "avatar">
+    <p style align = "middle">Edit <a href="">picture</a>.</p>
+    </div>
+    <form action="">
+    <div class="container2">
+    <label for="firstname"><b>First Name</b></label>
+    <input type="text" placeholder="Enter name" name="firstname" id="firstname" value={{{firstname}}} required>
+    <p></p>
+    <label for="name"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter name" name="lastname" id="lastname" value={{{lastname}}} required>
+    <p></p>
+    <label for="heightfeet"><b>Height Feet</b></label>
+    <input type="text" placeholder="Enter height" name="heightfeet" id="heightfeet" value={{{heightfeet}}} required>
+    <p></p>
+    <label for="heightinch"><b>Height Inch</b></label>
+    <input type="text" placeholder="Enter height" name="heightinch" id="heightinch" value={{{heightinch}}} required>
+    <p></p>
+    <label for="gender"><b>Sex</b></label><br><br>
+    <input type="radio" id="male" name="gender" value="male" >
+    <label for="male">Male</label><br><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    {{!-- still no value for gender radio button --}}
+    <p></p>
+    <label for="country"><b>Country</b></label>
+    <input type="text" placeholder="Change country" name="country" id="country" value={{{country}}} required>
+    <p></p>
+    </div>
+
+    <script>
+        function showpass(){
+        document.getElementById('changepass').style.display = "block ";
+        }
+    </script>
+
+    <div class="container3">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Change email" name="email" value={{{email}}} required>
+    <p></p>
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Change username" name="username" value={{{username}}} required>
+    <p></p>
+    <p>Change <a href="#avatar" onclick="showpass()">password?</a>.</p>
+
+        <div id = "changepass" style="display: none;">
+        <label for="crpsw"><b>Current Password</b></label>
+        <input type="password" placeholder="Current password" name="psw" id="psw" required>
+        <p></p>   
+        <label for="psw"><b>New Password</b></label>
+        <input type="password" placeholder="New password" name="psw" id="psw" required>
+        <p></p>
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Confirm new password" name="psw-repeat"  id="psw-repeat" required>
+        </div>
+
+    </div>
+
+    <hr>
+    <button type="submit" class="finishedit">Confirm changes</button>
+
+    </div>
+    <button type="reset" class="cancelbtn">Cancel changes</button>
+    </form>
+    <br>
+    <br>
+    <br>
+
+    <hr>
+    <div class="container">
+    <h1>Weight</h1>
+    <p>Manage your Weight inputs here.</p>
+    <div class="container2">
+      <p>Select weight inputs to be edited or deleted.</p>
+       <table class="scrolldown"> 
+          
+        <!-- Table head content -->
+        <thead> 
+            <tr> 
+                <th>#</th> 
+                <th>Weight</th> 
+                <th>Date</th> 
+                <th>Edit</th> 
+                <th>Delete</th> 
+            </tr> 
+        </thead> 
+          
+        <!-- Table body content -->
+        <tbody> 
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+            
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+        </tbody> 
+      </table> 
+      <br>
+      <br>
+    </div>
+    <hr>
+
+    <h1>BMI</h1>
+    <p>Manage your BMI inputs here.</p>
+    <div class="container2">
+      <p>Select BMI inputs to be edited or deleted.</p>
+       <table class="scrolldown"> 
+          
+        <!-- Table head content -->
+        <thead> 
+            <tr> 
+                <th>#</th> 
+                <th>BMI</th> 
+                <th>Date</th> 
+                <th>Edit</th> 
+                <th>Delete</th> 
+            </tr> 
+        </thead> 
+          
+        <!-- Table body content -->
+        <tbody> 
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+            
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+        </tbody> 
+      </table> 
+      <br>
+      <br>
+    </div>
+    <hr>
+
+    <h1>Body Fat</h1>
+    <p>Manage your Body Fat inputs here.</p>
+    <div class="container2">
+      <p>Select BMI inputs to be edited or deleted.</p>
+       <table class="scrolldown"> 
+          
+        <!-- Table head content -->
+        <thead> 
+            <tr> 
+                <th>#</th> 
+                <th>Body Fat</th> 
+                <th>Date</th> 
+                <th>Edit</th> 
+                <th>Delete</th> 
+            </tr> 
+        </thead> 
+          
+        <!-- Table body content -->
+        <tbody> 
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+            
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+              
+            <tr> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+                <td>Content</td> 
+            </tr> 
+        </tbody> 
+      </table> 
+      <br>
+      <br>
+    </div>
+    <hr>
+
+    <h1>Progress and Account</h1>
+    <p>Manage your Account progress or deletion here.</p>
+    <script>
+        function progress(){
+        document.getElementById('progresscontainer').style.display = "block ";
+        }
+        function yesprogress(){
+          /*code next time when database is done*/
+        }
+        function noprogress(){
+        document.getElementById('progresscontainer').style.display = "none ";
+        }
+
+        function account(){
+        document.getElementById('accountcontainer').style.display = "block ";
+        }
+        function yesaccount(){
+          /*code next time when database is done*/
+        }
+        function noaccount(){
+        document.getElementById('accountcontainer').style.display = "none";
+        }
+    </script>
+
+    <div class="container2">
+      <h5>Delete Entire Progress</h5>
+      <p>This will delete all of your data inputs in weight, BMI and Body Fat.</p>
+      <button type="button" id="deleteprogress" onclick="progress()">Delete Progress</button>
+      <div id="progresscontainer" style="display: none;">
+        <h6>Are your sure?</h6>
+        <button id="yesprogress">Yes</button><button id="noprogress" onclick="noprogress()">No</button>
+      </div>
+
+      <br>
+
+      <h5>Delete Account</h5>
+      <p>This will deactivate your account, delete all of your data inputs in weight, BMI and Body Fat and delete your account from our website.</p>
+      <button type="button" id="deleteaccount" onclick="account()">Delete Account</button>
+      <div id="accountcontainer" style="display: none;">
+        <h6>Are your sure?</h6>
+        <button id="yesaccount">Yes</button><button id="noaccount" onclick="noaccount()">No</button>
+      </div>
+    </div>
+
+    <hr>
+    
+    
+    <br>
+    <br>
+    <br>

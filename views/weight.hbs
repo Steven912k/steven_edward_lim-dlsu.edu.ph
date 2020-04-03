@@ -1,0 +1,137 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+    
+    <div id="main" style="text-align: center; font-size: 30px;">
+      <span style="cursor:pointer; float: left;" onclick="openNav()">&#9776;</span>
+      <b style="color: cornflowerblue; font-family: Raleway; font-size: 85px; font-weight: bolder;">WeightMate</b>
+    </div>
+    
+    <script>
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          document.getElementById("chartBackground").style.marginLeft = "550px";
+          document.getElementById("chartBackground").style.filter = "brightness(60%)";
+          document.getElementById("outer-div").style.filter = "brightness(60%)";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.getElementById("chartBackground").style.marginLeft = "400px";
+          document.getElementById("chartBackground").style.filter = "brightness(100%)";
+          document.getElementById("outer-div").style.filter = "brightness(100%)";
+          document.body.style.backgroundColor = "white";
+      }
+    </script>
+  <div id="chartBackground">
+    <br>
+    <div id="chartContainer">
+      <canvas id="myChart" height="65%" width="125%"></canvas>
+    </div>
+  </div>
+  <script>
+    var CHART = document.getElementById("myChart").getContext('2d');
+
+    var linechart = new Chart(CHART, {
+      type: 'line',
+      data: {
+        labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+        datasets: [{
+          label : "Weight",
+          fill : false,
+          backgroundColor : "rgba(75, 192, 192, 0.4)",
+          borderColor: "cornflowerblue",
+          pointBorderColor: "rgba(75,192,192,1)",
+          pointBackgroundColor: "#fff",
+          pointBorderWidth: 7,
+          pointHoverRadius: 9,
+          pointHoverBackgroundColor: "rgba(75,192,192,1)",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointHoverBorderWidth: 3,
+          pointRadius: 1,
+          data: [1,2,3,4,5,6,6,7]
+        }],
+      },
+      options:{}
+    }) 
+  </script>
+<br>
+<br>
+  <div align="center">
+    <p id="note">*Note input weight must be in pounds.</p>
+  </div>
+  <div id="outer-div" width="100%">
+      <div id="inner-div" >
+        <form action="/saveweight" method="POST" ><div style="margin:0px; padding:0px">
+          <div>
+            <label>Weight: </label>
+            <input type="number" placeholder="In pounds" name="weight" id="weight" maxlength="20" required/>
+          </div>
+          <br>
+          <div align="center">
+            <button type="submit" value="Save" name="weightsave" id="weightsave" class="btn btn-success">Save</button>
+            <input type="reset" value="Reset" name="weightreset" id="weightreset" class="btn btn-warning">
+          </div> 
+        </form>
+      </div>
+  </div>
+  <br>
+  <br>
+  <script>
+      function computeCalories(){
+        /*Temporary formula for men*/
+        var weight = (parseFloat(document.getElementById("Weightcal").value)) * 0.453592;
+        var height = ((parseFloat(document.getElementById("Feet").value) * 12) + parseFloat(document.getElementById("Inches").value)) * 2.54;
+        var age = parseFloat(document.getElementById("Age").value);
+        var BMR = (10*weight + 6.25*height - 5*age + 5);
+        document.getElementById("BMR").value = BMR.toFixed(2);
+      }
+  </script>
+  <div align="center" id="CaloriesCalc">
+      <p id="note">*Note that the resulting BMR or Calories intake is the minimum requirement for you to function assuming you have no exercise.</p>
+    </div>
+    <div id="outer-div" width="100%">
+        <div id="inner-div" >
+          <form action="POST" action="#"><div style="margin:0px; padding:0px">
+            <div align="left">
+              <label>Weight: </label>
+              <input style="float: right;" type="number" placeholder="In pounds" name="Weightcal" id="Weightcal" maxlength="20" required/>
+            </div>
+            <div align="left">
+              <label>Age: </label>
+              <input style="float: right;" type="number" name="Age" id="Age" maxlength="20" placeholder="In years" required/>
+            </div>
+            <div align="left">
+              <label>Height-Feet: </label>
+              <input style="float: right;" type="number" placeholder="Feet" name="Feet" id="Feet" maxlength="20" required/>
+            </div>
+            <div align="left">
+              <label>Height-Inches: </label>
+              <input style="float: right;" type="number" placeholder="Inches" name="Inches" id="Inches" maxlength="20" required/>
+            </div>
+            <br>
+            <div align="center">
+              <button type="button" value="Calculate" name="calculate" id="calculate" class="btn btn-success" onclick="computeCalories()" >Calculate</button>
+            </div> 
+            <br>
+            <div align="center">
+              <label >BMR/Calories: </label>
+              <input type="number" name="BMR" id="BMR" value="" readonly="readonly" />
+            </div> 
+          </form>
+        </div>
+    </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>

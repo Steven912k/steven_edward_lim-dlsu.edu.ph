@@ -1,0 +1,92 @@
+
+
+
+  <div id="mainhome">
+    <span style="cursor:pointer; float: left; font-size: 40px; color: white;" onclick="openNav()">&#9776;</span>
+    
+    <div>
+      <span><b style="color: white; font-size: 50px; text-align: left; margin-left: 30px; text-shadow: 4px 2px black;"><i>WeightMate</i></b></span>
+      <span style="color: white; font-size:18px; text-shadow: 4px 2px black;"><b>The Tracker that Cares.~</b></span>
+    </div>
+  
+  </div >
+
+  <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+
+        document.getElementById("mainhome").style.marginLeft = "250px";
+        document.getElementById("aboutweightmate").style.marginLeft = "250px";
+        document.getElementById("formulas").style.marginLeft = "250px";
+        document.getElementById("members").style.marginLeft = "250px";
+        document.getElementById("contactarea").style.marginLeft = "250px";
+
+        document.getElementById("mainhome").style.filter = "brightness(60%)";
+        document.getElementById("aboutweightmate").style.filter = "brightness(60%)";
+        document.getElementById("formulas").style.filter = "brightness(60%)";
+        document.getElementById("members").style.filter = "brightness(60%)";
+        document.getElementById("contactarea").style.filter = "brightness(60%)";
+
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+
+        document.getElementById("mainhome").style.marginLeft= "0";
+        document.getElementById("aboutweightmate").style.marginLeft= "0";
+        document.getElementById("formulas").style.marginLeft= "0";
+        document.getElementById("members").style.marginLeft= "0";
+        document.getElementById("contactarea").style.marginLeft= "0";
+
+        document.getElementById("mainhome").style.filter = "brightness(100%)";
+        document.getElementById("aboutweightmate").style.filter = "brightness(100%)";
+        document.getElementById("formulas").style.filter = "brightness(100%)";
+        document.getElementById("members").style.filter = "brightness(100%)";
+        document.getElementById("contactarea").style.filter = "brightness(100%)";
+
+        document.body.style.backgroundColor = "white";
+    }
+  </script>
+
+  <div id="aboutweightmate">
+    <div id="aboutweightmatetext">About WeightMate.</div>
+    <div id="aboutweightmateparagraph">Weight mate is a weight tracking website 
+      that can help you maintain or lose weight. It helps you by letting you 
+      see your progress through the graph shown per section of the site. 
+      Each day, you can input your weight in your account to let the site 
+      generate the right data graph for your progress. Weight mate also has 
+      various calculators related to your form to help you maintain or lose weight. 
+    </div>
+    <div>
+      <img src="https://i.ibb.co/vkgfj82/Logo-Maker-Ca-1582876910414-1.png" alt="WeightMate Logo" id="weightmatelogo1">
+    </div>
+  </div>
+
+  <div id="formulas">
+    <div id="formulastext">Formulas used by our calculators!</div>
+    <img src="https://i.ibb.co/HN1skz8/formula1.png" alt="formula1" id="formula1"><br>
+    <img src="https://i.ibb.co/LkhMjC1/formula2.png" alt="formula2" id="formula2"><br>
+    <img src="https://i.ibb.co/0DSX67B/formula3.png" alt="formula3" id="formula3">
+  </div>
+
+  <div id="members">
+    <div id="memberstext">Our team.</div>
+    <div id="stefen">
+      <div id="member1name">Steven Edward C. Lim</div>
+    </div>
+
+    <div id="lolmaster">
+      <div id="member2name">Geryco Eugynn Dionisio</div>
+    </div>
+
+    <div id="carlos">
+      <div id="member3name">Carlos Louise P. Ting</div>
+    </div>
+
+  </div>
+
+  <div id="contactarea">
+    <div id="contactinformation">Contact us!<br>0908-197-7271</div>
+  </div>
+

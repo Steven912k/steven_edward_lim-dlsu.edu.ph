@@ -1,0 +1,803 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+    font-family: "Lato", Helvetica, sans-serif;
+    transition: background-color .5s; 
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: cornflowerblue;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    border: none;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .dropdown-btn {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+    background-color: #555;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+.active {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+  
+  #mainhome, #main, #chartContainer{
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+
+  #mainhome {
+    background-color: cornflowerblue;
+    padding: 30px;
+  }
+  
+  #chartContainer{
+    transition: .5s;
+    background-color: white;
+    margin-left: 20px; 
+    height: 410px; 
+    width: 95%; 
+  }
+ 
+  #chartBackground{
+    background-color: #ffd500;
+    margin-left: 400px; 
+    transition: .5s;
+    height: 455px;
+    width: 50%; 
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  #outer-div {
+    width: 100%; 
+    text-align: center;
+    transition: .5s;
+  }
+  #inner-div {
+  display: inline-block; 
+  margin: 0 auto;
+  padding: 3px;
+  }
+  
+  #inner-div div{
+    margin-bottom: 10px;
+  }
+  
+  #note{
+    color: cornflowerblue;
+    font-family: "Raleway";
+  }
+
+  /*Account Steven*/
+  table.scrolldown { 
+    width: 100%; 
+      
+    /* border-collapse: collapse; */ 
+    border-spacing: 0; 
+    border: 2px solid black; 
+} 
+  
+/* To display the block as level element */ 
+table.scrolldown tbody, table.scrolldown thead { 
+    display: block; 
+}  
+  
+thead tr th {   
+    height: 40px;  
+    line-height: 40px; 
+} 
+  
+table.scrolldown tbody { 
+      
+    /* Set the height of table body */ 
+    height: 100px;  
+      
+    /* Set vertical scroll */ 
+    overflow-y: auto; 
+      
+    /* Hide the horizontal scroll */ 
+    overflow-x: hidden;  
+} 
+  
+tbody {  
+    border-top: 2px solid black; 
+} 
+  
+tbody td, thead th { 
+    width : 200px; 
+    border-right: 2px solid black; 
+} 
+td { 
+    text-align:center; 
+} 
+h5 {
+  font-size: large;
+}
+h6 {
+  font-size: medium;
+}
+
+#yesprogress, #noprogress, #yesaccount, #noaccount{
+  display: inline-block;
+  margin-left: 10px;
+  width: 15%;
+}
+
+#yesprogress, #yesaccount{
+  background-color: lightgreen;
+  margin-left: 200px;
+}
+
+#noprogress, #noaccount {
+  background-color: lightcoral;
+}
+
+  
+
+  /*Ting's*/
+
+  #welcome {
+    background-size: cover;
+    background-color: #302f2a;
+    padding-top: 70px;
+    padding-bottom: 275px;
+    text-align: center;
+    max-height: 300px;
+    transition: margin-left .5s;
+  }
+
+  #welcometext1 {
+    position: relative;
+    left: 280px;
+    top: 90px;
+    text-shadow: 5px 2px black;
+  }
+
+  #welcometext2 {
+    position: relative;
+    left: 280px;
+    top: 110px;
+    text-shadow: 4px 2px black;
+  }
+
+  #weightmatelogo {
+    border-radius: 5%;
+    position: relative;
+    right: 450px;
+    bottom: 180px;
+    height: 500px;
+    width: 490px;
+    z-index: 0;
+  }
+
+  .learnbutton {
+    background-color:transparent;
+    border-radius:0px;
+    border:3px solid #fcfcfc;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Trebuchet MS;
+    font-size:17px;
+    padding:10px 50px;
+    text-decoration:none;
+    position: relative;
+    top: -320px;
+    left: 525px;
+  }
+  .learnbutton:hover {
+    background-color:transparent;
+  }
+  .learnbutton:active {
+    background-color: #444d66;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  #objectives {
+    background-size: cover;
+    background-color: #c8cacc;
+    color: black;
+    text-align: center;
+    padding-bottom: 225px;
+    max-height: 270px;
+    transition: margin-left .5s;
+  }
+
+  #begin {
+    background-size: cover;
+    background-color: #302f2a;
+    padding-bottom: 225px;
+    text-align: center;
+    max-height: 500px;
+    transition: margin-left .5s;
+  }
+
+  #begintext {
+    color: white;
+    font-weight: bold;
+    font-size: 120px;
+    position: relative;
+    top: 100px;
+    text-shadow: 4px 2px black;
+  }
+
+  .beginbutton {
+    background-color:transparent;
+    border-radius:42px;
+    border:3px solid #fcfcfc;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Trebuchet MS;
+    font-size:17px;
+    padding:10px 130px;
+    text-decoration:none;
+    position: relative;
+    top: 140px;
+  }
+  .beginbutton:hover {
+    background-color:transparent;
+  }
+  .beginbutton:active {
+    background-color: #444d66;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  #track {
+    background-image:  url(https://www.quickanddirtytips.com/sites/default/files/images/5360/line_graph.png);
+    background-size: cover;
+    background-color: #c8cacc;
+    color: black;
+    text-align: left;
+    padding-bottom: 500px;
+    max-height: 200px;
+    width: 100%;
+    height: 500px;
+    transition: margin-left .5s;
+  }
+
+  #tracktext {
+    color: black;
+    font-weight: bold;
+    font-size: 120px;
+    position: relative;
+    top: 100px;
+    left: 200px;
+    text-shadow: 4px 2px white;
+  }
+
+  .trackbutton {
+    background-color:transparent;
+    border-radius:42px;
+    border:9px solid #302f2a;
+    display:inline-block;
+    cursor:pointer;
+    color:#302f2a;
+    font-family:Trebuchet MS;
+    font-size:40px;
+    font-weight: bold;
+    padding:10px 120px;
+    text-decoration:none;
+    position: relative;
+    top: 160px;
+    left : 200px;
+  }
+  .trackbutton:hover {
+    background-color:transparent;
+  }
+  .trackbutton:active {
+    background-color: transparent;
+    box-shadow: 0 5px #665;
+    transform: translateY(4px);
+  }
+
+  #calculators {
+    background-size: cover;
+    background-color: #302f2a;
+    padding-bottom: 225px;
+    text-align: center;
+    max-height: 450px;
+    transition: margin-left .5s;
+  }
+
+  #calculatortext {
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    position: relative;
+    top: 70px;
+    text-shadow: 4px 2px black;
+  }
+
+  #calculatortable {
+    position: relative;
+    border-collapse: separate;
+    border-spacing: 10px;
+  }
+
+  #backtotop {
+    padding-top: 40px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    font-style: oblique;
+  }
+
+  .bodyfatbutton {
+    box-shadow: 6px 9px 9px 0px black;
+    background:linear-gradient(to bottom, #faa973 5%, #ebc075 100%);
+    background-color:#faa973;
+    border-radius:5px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:40px;
+    font-weight:bold;
+    font-style:italic;
+    padding:150px 100px;
+    text-decoration:none;
+    text-shadow:0px 2px 0px #717478;
+  }
+  .bodyfatbutton:hover {
+    background:linear-gradient(to bottom, #faa973, #ebc075 5%,  100%);
+    background-color:#ebc075;
+  }
+  .bodyfatbutton:active {
+    position:relative;
+    top:1px;
+  }
+
+  .bmibutton {
+    box-shadow: 6px 9px 9px 0px black;
+    background:linear-gradient(to bottom, #de395a 5%, #e04564 100%);
+    background-color:#de395a;
+    border-radius:5px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:40px;
+    font-weight:bold;
+    font-style:italic;
+    padding:150px 100px;
+    text-decoration:none;
+    text-shadow:0px 2px 0px #717478;
+  }
+
+  .bmibutton:hover {
+    background:linear-gradient(to bottom, #e04564 5%, #de395a 100%);
+    background-color:#e04564;
+  }
+
+  .bmibutton:active {
+    position:relative;
+    top:1px;
+  }
+  
+  .caloriesbutton {
+    box-shadow: 6px 9px 9px 0px black;
+    background:linear-gradient(to bottom, #355b7d 5%, #355b7d 100%);
+    background-color:#355b7d;
+    border-radius:5px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:40px;
+    font-weight:bold;
+    font-style:italic;
+    padding:150px 100px;
+    text-decoration:none;
+    text-shadow:0px 2px 0px #717478;
+  }
+  .caloriesbutton:hover {
+    background:linear-gradient(to bottom, #355b7d 5%, #355b7d 100%);
+    background-color:#355b7d;
+  }
+  .caloriesbutton:active {
+    position:relative;
+    top:1px;
+  }
+
+  #contactus {
+    background-size: cover;
+    background-color: cornflowerblue;
+    padding-bottom: 50px;
+    text-align: center;
+    max-height: 270px;
+    transition: margin-left .5s;
+  }
+
+  #contactustext {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 2px black;
+    position: relative;
+    top: 20px;
+  }
+
+  .contactbutton {
+    background-color:transparent;
+    border-radius:10px;
+    border:3px solid #fcfcfc;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Trebuchet MS;
+    font-size:17px;
+    padding:10px 60px;
+    text-decoration:none;
+    position: relative;
+    top: 40px;
+  }
+  .contactbutton:hover {
+    background-color:transparent;
+  }
+
+  .contactbutton:active {
+    background-color: #444d66;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+/*Ting's*/
+
+/*About Page*/
+
+  #aboutweightmate {
+  background-size: cover;
+  background-color: #254173;
+  padding-top: 70px;
+  padding-bottom: 300px;
+  max-height: 300px;
+  transition: margin-left .5s;
+  z-index: -1;
+  }
+
+  #aboutweightmatetext {
+    position: relative;
+    left: 80px;
+    top: 10px;
+    font-weight: bold;
+    font-size: 70px;
+    color: white;
+    text-shadow: 6px 3px black;
+  }
+
+  #aboutweightmateparagraph {
+    position: relative;
+    left: 80px;
+    top: 50px;
+    font-size: 35px;
+    text-align: justify;
+    font-style: italic;
+    color: white;
+    text-shadow: 3px 1px black;
+    max-width: 650px;
+  }
+
+  #weightmatelogo1 {
+    position: relative;
+    height: 460px;
+    width: 450px;
+    left: 810px;
+    top: -430px;
+    margin-bottom: -430px;
+    text-align: center;
+    border-radius: 5%;
+  }
+
+  #formulas {
+    background-size: cover;
+    background-color: #302f2a;
+    padding-top: 70px;
+    padding-bottom: 275px;
+    text-align: center;
+    max-height: 1000px;
+    transition: margin-left .5s;
+  }
+
+  #formulastext {
+    position: relative;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    text-shadow: 5px 2px black;
+    transition: margin-left .5s;
+  }
+
+  #formula1{
+    position: relative;
+    top: 30px;
+    box-shadow: 8px 4px black;
+  }
+
+  #formula2{
+    box-shadow: 8px 4px black;
+    position: relative;
+    top: 110px;
+  }
+
+  #formula3{
+    box-shadow: 8px 4px black;
+    position: relative;
+    top: 190px;
+  }
+
+  #members {
+    background-image: url(http://www.puzzlechoice.com/cw/Diagrm_Grid/IMAG0000.GIF);
+    height: 700px;
+    transition: margin-left .5s;
+  }
+
+  #memberstext {
+    color: black;
+    font-weight: bold;
+    font-size: 120px;
+    text-align: center;
+    position: relative;
+    top: 123px;
+    text-shadow: 4px 2px #ff033d;
+  }
+
+  #member1name {
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    text-shadow: 4px 2px #ff29f1;
+  }
+
+  #member2name {
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    text-shadow: 4px 2px yellow;
+  }
+
+  #member3name {
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 250px;
+    text-shadow: 4px 2px #6efff8;
+  }
+
+  #contactarea {
+    background-size: cover;
+    background-color: black;
+    padding-top: 70px;
+    padding-bottom: 275px;
+    text-align: center;
+    max-height: 1000px;
+    transition: margin-left .5s;
+  }
+
+  #contactinformation {
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    transition: margin-left .5s;
+  }
+/*About Page*/
+
+/*Geryco*/
+.container {
+  padding: 16px;
+}
+
+form.login {
+  border: 5px solid black;
+  background-color : cornflowerblue;
+}
+
+/* Full-width inputs */
+form.login input[type=text] {
+  width: 18%;
+  padding: 8px 12px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+form.login input[type=password] {
+  width: 10%;
+  padding: 8px 12px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.container button {
+  background-color: #4CAF50;
+  border : 2px solid black;
+  color: black;
+  padding: 14px 20px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+ 
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  border : 2px solid black;
+  padding: 15px 18px;
+  background-color: #f44336;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 15%;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+form.register{
+  border: 5px solid black;
+  background-color : #D3D3D3;
+}
+
+/* Full-width input fields */
+form.register input[type=text] {
+  width: 10%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: block;
+  border: none;
+  background: #f1f1f1;
+}
+
+form.register input[type=password] {
+  width: 20%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.container .container2 {
+  display: inline-block;
+  margin-left: 400px;
+}
+
+.container .container3 {
+  display: inline-block;
+  margin-left: 300px;
+  
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: 2px solid black;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: blue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+form.login .container {
+  background-color: #D3D3D3;
+}
+
+.definition{
+  margin-left: 300px;
+}
