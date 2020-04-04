@@ -69,12 +69,17 @@
     <label for="heightinch"><b>Height Inch</b></label>
     <input type="text" placeholder="Enter height" name="heightinch" id="heightinch" value={{{heightinch}}} required>
     <p></p>
-    <label for="gender"><b>Sex</b></label><br><br>
-    <input type="radio" id="male" name="gender" value="male" >
-    <label for="male">Male</label><br><br>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label>
-    {{!-- still no value for gender radio button --}}
+    {{#if_eq sex 'male'}}
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Male</label><br><br>
+        <input type="radio" id="female" name="gender" value="female" >
+        <label for="female">Female</label>
+    {{else}}
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br><br>
+        <input type="radio" id="female" name="gender" value="female" checked>
+        <label for="female">Female</label>
+    {{/if_eq}}
     <p></p>
     <label for="country"><b>Country</b></label>
     <input type="text" placeholder="Change country" name="country" id="country" value={{{country}}} required>

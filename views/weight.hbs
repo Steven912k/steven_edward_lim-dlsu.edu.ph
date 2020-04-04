@@ -8,6 +8,7 @@
       <b style="color: cornflowerblue; font-family: Raleway; font-size: 85px; font-weight: bolder;">WeightMate</b>
     </div>
     
+    
     <script>
       function openNav() {
           document.getElementById("mySidenav").style.width = "250px";
@@ -33,7 +34,16 @@
       <canvas id="myChart" height="65%" width="125%"></canvas>
     </div>
   </div>
+  {{!-- <script>
+    var jvweights = weights;
+    for(x in jvweights){
+      console.log(x.value);
+      console.log(x.date);
+    }
+  </script> --}}
   <script>
+    
+
     var CHART = document.getElementById("myChart").getContext('2d');
 
     var linechart = new Chart(CHART, {
@@ -51,13 +61,35 @@
           pointHoverRadius: 9,
           pointHoverBackgroundColor: "rgba(75,192,192,1)",
           pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointHoverBorderWidth: 3,
+          pointHoverBorderWidth: 3, 
           pointRadius: 1,
           data: [1,2,3,4,5,6,6,7]
         }],
       },
       options:{}
-    }) 
+    });
+
+    function updateChart(){
+            chart.data.datasets[0].data = newdata;
+            chart.data.datasets[1].data = newdata1;
+            chart.update();
+        };
+
+        function addData(chart, label, data) {
+            chart.data.labels.push(label);
+            chart.data.datasets.forEach((dataset) => {
+                dataset.data.push(data);
+            });
+            chart.update();
+        };
+
+        function removeData(chart) {
+            chart.data.labels.pop();
+            chart.data.datasets.forEach((dataset) => {
+                dataset.data.pop();
+            });
+            chart.update();
+        }; 
   </script>
 <br>
 <br>
@@ -103,15 +135,15 @@
             </div>
             <div align="left">
               <label>Age: </label>
-              <input style="float: right;" type="number" name="Age" id="Age" maxlength="20" placeholder="In years" required/>
+              <input style="float: right;" type="number" name="Age" id="Age" maxlength="20" placeholder="In years" value={{{age}}} required/>
             </div>
             <div align="left">
               <label>Height-Feet: </label>
-              <input style="float: right;" type="number" placeholder="Feet" name="Feet" id="Feet" maxlength="20" required/>
+              <input style="float: right;" type="number" placeholder="Feet" name="Feet" id="Feet" maxlength="20" value={{{heightfeet}}} required/>
             </div>
             <div align="left">
               <label>Height-Inches: </label>
-              <input style="float: right;" type="number" placeholder="Inches" name="Inches" id="Inches" maxlength="20" required/>
+              <input style="float: right;" type="number" placeholder="Inches" name="Inches" id="Inches" maxlength="20" value={{{heightinch}}} required/>
             </div>
             <br>
             <div align="center">

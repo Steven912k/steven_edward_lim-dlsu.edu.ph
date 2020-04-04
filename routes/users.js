@@ -9,37 +9,13 @@ router.get('/home', ensureAuthenticated,(req, res) =>
         username: req.user.username 
     }));
 
-// const dbweights = req.user.weights;
-
-// var arrayweights
-
-// for (const wval of dbweights){
-
-// }
-
 router.get('/weight', ensureAuthenticated,(req, res) => res.render('weight', {
-    weights: req.user.weights
-}));
-
-
-
-router.post('/saveweight', (req, res) =>{
-    User.update({_id: req.user._id}, 
-    {   $push: { "weights": {
-        value: parseFloat(req.body.weight),
-        date: new Date()
-    }}
-  })
-  .then(user=> {
-    if(!user) console.log('user do not exists');
-
-    console.log('success');
-
-    })
-    .catch(err=>{
-        console.log(err)
-    });
-});
+    weights: req.user.weights,
+    // age: (new Date() - req.user.birthdate),
+    heightfeet: req.user.heightfeet,
+    heightinch: req.user.heightinch,
+  }
+));
 
 router.get('/bmi', ensureAuthenticated,(req, res) => res.render('bmi'));
 router.get('/bodyfat', ensureAuthenticated,(req, res) => res.render('bodyfat'));

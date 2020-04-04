@@ -5,6 +5,7 @@ const handlebars = require('handlebars');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const app = express();
+
 require('./config/passport')(passport);
 const port = 3000;
 const flash = require('connect-flash');
@@ -29,6 +30,13 @@ app.engine( 'hbs', exphbs({
     em: function(text) {
       var x = `<em>${text}</em>`;
       return new handlebars.SafeString(x);
+    },
+    if_eq: function(a,b, opts) {
+      if (a === b) {
+        return opts.fn(this);
+      } else {
+        return opts.inverse(this);
+      }
     }
   }
 }));
@@ -61,20 +69,22 @@ app.use((req, res, next) => {
 });
 
 const UserControl = require('./controllers/UserControl');
+const IndexControl = require('./controllers/IndexControl');
 
 app.set('view engine', 'hbs');
-
-//for postman
-app.post('/api/register/create', UserControl.create);
-// app.post('/api/register/update', UserControl.update);
-app.get('/api/register/retrieve', UserControl.retrieve);
-app.delete('/api/register/delete', UserControl.delete);
-
 
 //Routes
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
-app.post('/saveweight', UserControl.update);
+
+app.use('/logout', IndexControl.logout);
+
+app.post('/register', IndexControl.register);
+app.post('/', IndexControl.login);
+
+app.post('/saveweight', UserControl.insertweight);
+app.post('/saveBMI', UserControl.inserBMI);
+app.post('/saveBFP', UserControl.inserBFP);
 
 app.listen(port, function() {
   console.log('App listening at port '  + port)
